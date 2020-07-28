@@ -525,4 +525,20 @@ public class SasFileProperties {
     public void setColumnsCount(long columnsCount) {
         this.columnsCount = columnsCount;
     }
+
+    @Override
+    public String toString() {
+        return "SasFileProperties{" + "u64=" + u64 + ", compressionMethod="
+                + compressionMethod + ", endianness=" + endianness
+                + ", encoding=" + encoding + ", sessionEncoding="
+                + sessionEncoding + ", name=" + name + ", fileType="
+                + fileType + ", fileLabel=" + fileLabel + ", dateCreated="
+                + dateCreated + ", dateModified=" + dateModified
+                + ", sasRelease=" + sasRelease + ", serverType=" + serverType
+                + ", osName=" + osName + ", osType=" + osType
+                + ", headerLength=" + headerLength + ", pageLength="
+                + pageLength + ", pageCount=" + pageCount + ", rowLength="
+                + rowLength + ", rowCount=" + rowCount + ", mixPageRowCount="
+                + mixPageRowCount + ", columnsCount=" + columnsCount + '}';
+    }
 }

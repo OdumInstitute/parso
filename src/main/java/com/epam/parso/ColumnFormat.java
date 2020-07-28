@@ -101,6 +101,11 @@ public class ColumnFormat {
      */
     @Override
     public String toString() {
-        return isEmpty() ? "" : name + (width != 0 ? width : "") + "." + (precision != 0 ? precision : "");
+        return "ColumnFormat{" + "name=" + name + ", width=" + width
+                + ", precision=" + precision + '}';
     }
+//    @Override
+//    public String toString() {
+//        return isEmpty() ? "" : name + (width != 0 ? width : "") + "." + (precision != 0 ? precision : "");
+//    }
 }

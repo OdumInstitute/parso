@@ -114,4 +114,12 @@ public class ColumnMissingInfo {
      * Enumeration of missing information types.
      */
     public enum MissingInfoType { NAME, FORMAT, LABEL }
+
+    @Override
+    public String toString() {
+        return "ColumnMissingInfo{" + "columnId=" + columnId
+                + ", textSubheaderIndex=" + textSubheaderIndex
+                + ", offset=" + offset + ", length=" + length
+                + ", missingInfoType=" + missingInfoType + '}';
+    }
 }

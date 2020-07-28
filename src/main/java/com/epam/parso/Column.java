@@ -150,4 +150,11 @@ public class Column {
     public void setFormat(ColumnFormat format) {
         this.format = format;
     }
+
+    @Override
+    public String toString() {
+        return "Column{" + "id=" + id + ", name=" + name + ", label=" + label
+                + ", format=" + format + ", type=" + type + ", length="
+                + length + '}';
+    }
 }
