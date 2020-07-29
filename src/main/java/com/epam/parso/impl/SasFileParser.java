@@ -77,8 +77,9 @@ public final class SasFileParser {
      * The mapping of the supported string literals to the compression method they mean.
      */
     private static final Map<String, Decompressor> LITERALS_TO_DECOMPRESSOR = new HashMap<String, Decompressor>();
-
-    //sanity check on maximum page length
+    /**
+     * sanity check on maximum page length.
+     */
     private static final int MAX_PAGE_LENGTH = 10000000;
 
     static {
@@ -331,7 +332,7 @@ public final class SasFileParser {
         int pageLength = bytesToInt(vars.get(7));
         if (pageLength > MAX_PAGE_LENGTH) {
             throw new IOException("Page limit ("
-                    + pageLength + ") exceeds maximum: "+MAX_PAGE_LENGTH);
+                    + pageLength + ") exceeds maximum: " + MAX_PAGE_LENGTH);
         }
         sasFileProperties.setPageLength(pageLength);
         sasFileProperties.setPageCount(bytesToLong(vars.get(8)));
